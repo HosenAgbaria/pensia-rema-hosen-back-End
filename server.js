@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const port = process.env.PORT;
 var randomId = function () {
   // Math.random should be unique because of its seeding algorithm.
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
@@ -40,4 +41,4 @@ app.get("/", function (req, res) {
   res.send(articlesAboutDirector);
 });
 
-app.listen(3000);
+app.listen(port || 3000);
