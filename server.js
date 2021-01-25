@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
 const port = process.env.PORT;
 var randomId = function () {
   // Math.random should be unique because of its seeding algorithm.
