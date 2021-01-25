@@ -37,6 +37,9 @@ let articlesAboutDirector = [
       "https://www.pinterest.com/pin/461196818093484412/?d=t&mt=signup",
   },
 ];
+app.use(cors());
+app.use(express.json());
+app.use(cookieParser());
 app.get("/", function (req, res) {
   res.send(articlesAboutDirector);
 });
