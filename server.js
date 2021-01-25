@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 var cors = require("cors");
 const port = process.env.PORT;
+let articlesAboutDirector = require("./routes/article");
+
 var randomId = function () {
   // Math.random should be unique because of its seeding algorithm.
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
